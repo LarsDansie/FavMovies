@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieTableViewCell" rowHeight="103" id="fdF-dd-WxM" customClass="MovieTableViewCell" customModule="CoreDataFavoriteMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="397" height="103"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fdF-dd-WxM" id="sKX-cu-J3v">
+                <rect key="frame" x="0.0" y="0.0" width="397" height="103"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="E1f-n7-UDs">
+                        <rect key="frame" x="20" y="11" width="357" height="81"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moviePlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="OFw-FQ-E4g">
+                                <rect key="frame" x="0.0" y="6" width="55" height="69"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="OFw-FQ-E4g" secondAttribute="height" multiplier="4:5" id="P9z-M5-5z0"/>
+                                    <constraint firstAttribute="width" constant="55" id="iTb-Qa-VU4"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ap6-66-OqM">
+                                <rect key="frame" x="70.999999999999986" y="16.666666666666668" width="129.66666666666663" height="47.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJM-zA-JP0">
+                                        <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aJe-Vr-bTR">
+                                        <rect key="frame" x="0.0" y="28.333333333333329" width="39.666666666666664" height="19.333333333333343"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="91R-8T-hA1" userLabel="Spacer">
+                                <rect key="frame" x="216.66666666666666" y="9" width="73.666666666666657" height="63"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P7j-0o-kD9">
+                                <rect key="frame" x="306.33333333333331" y="23.333333333333332" width="50.666666666666686" height="34.333333333333343"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="favoriteButtonPressed" destination="fdF-dd-WxM" eventType="touchUpInside" id="5tG-Tt-kXF"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="E1f-n7-UDs" firstAttribute="top" secondItem="sKX-cu-J3v" secondAttribute="topMargin" id="ZH6-aN-8NT"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="E1f-n7-UDs" secondAttribute="bottom" id="h2P-33-D4n"/>
+                    <constraint firstItem="E1f-n7-UDs" firstAttribute="leading" secondItem="sKX-cu-J3v" secondAttribute="leadingMargin" id="mDY-vP-ULW"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="E1f-n7-UDs" secondAttribute="trailing" id="qIQ-Y1-JOq"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="heartButton" destination="P7j-0o-kD9" id="JYf-xg-MtH"/>
+                <outlet property="posterImageView" destination="OFw-FQ-E4g" id="Dig-ID-4QE"/>
+                <outlet property="titleLabel" destination="jJM-zA-JP0" id="4k1-SE-KlP"/>
+                <outlet property="yearLabel" destination="aJe-Vr-bTR" id="Fl3-5I-VeS"/>
+            </connections>
+            <point key="canvasLocation" x="-408.46153846153845" y="129.739336492891"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="moviePlaceholder" width="82" height="114"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
